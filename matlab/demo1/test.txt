@@ -1,0 +1,6 @@
+The value of the variable a is 5
+	Bye Bye!!The value of the variable a is 22.23300000
+
+ variable a is still a value of 5.00 
+
+ Bye again!
