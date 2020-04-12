@@ -6,9 +6,7 @@ clear;
 [my_speech fs1] = audioread('Ch_f1.wav'); % record 2 seconds of speech
 my_speech_in_church = conv(my_speech, church_impulse);
 sound(my_speech_in_church, fs); %play back the recording. It should sound like you are speaking in a church
-H = fft(church_impulse);
-figure;plot(abs(H)); % show magnitude response against bin number
-figure;plot(angle(H));% show phase response against bin number
+
 
 %y[n] = 0.3x[n] + 1.5x[n-1] + 0.6y[n-1]
 x1 = [ 2 4 5 23 1 34 5] ; % an example signal
@@ -55,14 +53,10 @@ figure;plot(w, angle(H));% show phase response against normalised frequency
 
 
 
-
-
-
-
-
-
-
-
+H = fft(church_impulse);
+N = length(church_impulse);
+freq_scale = 0 : fs/(N-1) : fs;
+figure;plot(freq_scale, abs(H)); % show magnitude response against normalised frequency plot(freq_scale, angle(H));% show phase response against normalised frequency
 
 
 

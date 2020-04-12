@@ -1,9 +1,8 @@
 %https://blog.csdn.net/abcjennifer/article/details/7616663
 
 clc;
-clear;
 
-I=imread('summer.png');  
+I=imread('timg.jpeg');  
 I=double(I)/255;  
   
 w     = 5;       % bilateral filter half-width  
@@ -15,3 +14,18 @@ subplot(1,2,1);
 imshow(I);  
 subplot(1,2,2);  
 imshow(I1)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
