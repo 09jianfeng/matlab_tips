@@ -40,6 +40,9 @@ plot(y);xlabel('number of sample');
 title('Output signals'); 
 subplot(3,1,3);
 plot(g);xlabel('number of sample');title('gain');legend('gain');
+
 figure;plot(y,'r'); hold on;plot(x); 
 title('Output signals & Input signals ');xlabel('number of sample');
 legend('Output signals','Input signals');
+
+
