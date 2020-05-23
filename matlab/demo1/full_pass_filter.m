@@ -4,6 +4,7 @@
 %sliptfilter
 
 clc; close all; clear all;
+
 %20972 5571
 % È«Í¨ÂË²¨Æ÷ z^-1* A1(z)
 c = 20972/(2^15);
@@ -30,9 +31,17 @@ H = H/2;
 Hf=abs(H);
 Ha= angle(H);
 plot((1:512)*x,Hf(1:512)); hold on;
+
+
+
 %µÍÍ¨ÂË²¨
 L = A1 + A0;
 L = L/2;
 Lf = abs(L);
 La = angle(L);
 plot((1:512)*x,Lf(1:512));
+
+
+
+
+

@@ -10,7 +10,7 @@ t = (0:L-1)*T;        % Time vector
 S = 0.7*sin(2*pi*50*t) + sin(2*pi*120*t);
 %用均值为零、方差为 4 的白噪声扰乱该信号。
 X = S + 2*randn(size(t));
-plot(1000*t(1:50),X(1:50))
+figure;plot(1000*t(1:50),X(1:50))
 title('Signal Corrupted with Zero-Mean Random Noise')
 xlabel('t (milliseconds)')
 ylabel('X(t)')
@@ -22,7 +22,7 @@ P1 = P2(1:L/2+1);% fetch half of P2
 P1(2:end-1) = 2*P1(2:end-1); % times 2 to turn to 1-side spectrum （k>0）
 %定义频域 f 并绘制单侧幅值频谱 P1。与预期相符，由于增加了噪声，幅值并不精确等于 0.7 和 1。一般情况下，较长的信号会产生更好的频率近似值。
 f = Fs*(0:(L/2))/L; % calculate real frequency of each point
-plot(f,P1) 
+figure;plot(f,P1) 
 title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
@@ -34,7 +34,14 @@ P2 = abs(Y/L);
 P1 = P2(1:L/2+1);
 P1(2:end-1) = 2*P1(2:end-1);
 
-plot(f,P1) 
+figure;plot(f,P1) 
 title('Single-Sided Amplitude Spectrum of S(t)')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
+
+
+
+
+
+
+
